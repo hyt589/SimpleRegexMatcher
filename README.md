@@ -1,0 +1,2 @@
+# Overview
+This is a simple regex matcher implemented in Java. The program parses the input regex and translates it into a non-deterministic finite automaton (NFA), which is then used to validate the input string against the regex.
