@@ -30,5 +30,18 @@ public class NFATest {
         assertTrue("abc", nfa.matches("abc"));
     }
 
+    @Test
+    public void charTest(){
+        NFA nfa = NFA.c('a');
+        assertTrue("char a", nfa.matches("a"));
+        assertFalse("char a - does not match", nfa.matches("b"));
+    }
+
+    @Test
+    public void epsilonTest() {
+        NFA nfa = NFA.e();
+        assertTrue("empty string", nfa.matches(""));
+        assertFalse("non empty string", nfa.matches("s"));
+    }
 
 }
