@@ -30,4 +30,5 @@ public class NFATest {
         assertTrue("abc", nfa.matches("abc"));
     }
 
+
 }

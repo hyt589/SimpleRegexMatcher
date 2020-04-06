@@ -36,10 +36,10 @@ public class NFA {
 
     public static NFA s(NFA first, NFA second) {
         first.exit.setFinal(false);
-        second.exit.setFinal(true);
         assert !first.exit.isFinal() : "first exit is final, can't chain";
         assert second.exit.isFinal() : "second exit must be final";
         first.exit.addEpsilonEdge(second.entry);
+        second.exit.setFinal(true);
         return new NFA(first.entry, second.exit);
     }
 

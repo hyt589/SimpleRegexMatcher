@@ -50,7 +50,7 @@ public class NFAstate {
                 return true;
             } else{
                 for (NFAstate state : onEpsilon) {
-                    if (state.isFinal) {
+                    if (state.matches("", history)) {
                         return true;
                     }
                 }
